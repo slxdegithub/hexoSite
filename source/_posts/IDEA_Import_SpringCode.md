@@ -12,9 +12,9 @@ tags: "spring"
 
 >https://github.com/spring-projects/spring-framework/tree/5.1.x
 >
->![/image-20211126191825760](image-20211126191825760.png)
+>![image-20211126191825760](IDEA_Import_SpringCode/image-20211126191825760.png)
 
-![/image-20211126191900085](image-20211126191900085.png)
+![image-20211126191900085](IDEA_Import_SpringCode/image-20211126191900085.png)
 
 先把源码下载好，推荐5.0X或者5.1X
 
@@ -33,13 +33,13 @@ tags: "spring"
 
 
 
-![/image-20211126194001815](image-20211126194001815.png)
+![/image-20211126194001815](IDEA_Import_SpringCode/image-20211126194001815.png)
 
 打开后可以看到 默认是去gradle仓库下载指定版本的，
 
 所以接下来我们下载的时候最好下载适配版本，不然很容易出现各种奇奇怪怪的错误。
 
-![/image-20211126194132893](image-20211126194132893.png)
+![/image-20211126194132893](IDEA_Import_SpringCode/image-20211126194132893.png)
 
 gradle下载地址
 
