@@ -18,7 +18,7 @@ timezone: ''
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project
 #url: http://slx.cool/ 
-url: https://github.com/slxdegithub/hexo.git
+url: https://slx.blue/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -82,7 +82,7 @@ prismjs:
 
   
 #开启各种压缩
-all_minifier: false
+all_minifier: true
 
 # html压缩
 html_minifier:
@@ -111,7 +111,7 @@ js_concator:
 
 # 图片优化
 image_minifier:
-  enable: false
+  enable: true
   interlaced: false
   multipass: false
   optimizationLevel: 2
