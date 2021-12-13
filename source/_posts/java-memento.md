@@ -1,5 +1,5 @@
 ---
-title: java-memento
+title: java-备忘录模式
 date: 2021-12-13 19:45:43
 categories: designMode
 tags: "设计模式"
