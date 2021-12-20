@@ -1,6 +1,6 @@
 ---
 title: springMVC-04
-date: 2021-12-14 19:49:46
+date: 2021-12-13 19:49:46
 categories: "springMVC"
 tags: "springMVC"
 ---
@@ -1466,3 +1466,33 @@ PageHelper.startPage(pageNo, pageSize);
 
 开启分页功能，就在 SQL 语句后面附加 LIMIT 子句并查询总记录数；不开启就还是按照原样查询。分页功能对原有的 Mapper 接口、SQL 语句没有任何影响。这个效果可以称之为是非侵入式，也可以说是可插拔的。
 
+
+
+## 总结
+
+1. ContextLoaderListener: 在服务器启动的时候加载配置文件创建IOC容器
+   1. ContextLoaderListener创建的IOC是DispatcherServlet 创建的IOC容器的父容器；
+   2. 子容器中可以拿到父容器中的对象
+   3. 在我们项目中DispatchServlet只负责表现层，只扫描Controller或者是RestController
+   4. ContextLoaderListener负责其它的
+2. Spring与Mybatis整合
+   1. 引入mybatis-spring的整合的依赖
+   2. mybatis的使用和以前一样，只是不用写全局配置文件，并且也不用写创建持久层代理对象的那一堆代码
+   3. 整合的目的: 在Spring的IOC容器中持有持久层的代理对象
+   4. 整合的步骤:
+      1. 在spring的配置文件中配置SqlSessionFactoryBean
+         1. 注入dataSource
+         2. 别名包扫描
+         3. 驼峰配置
+         4. 懒加载等等配置
+         5. 指定映射配置文件的路径
+      2. 扫描持久层接口所在的包
+3. PageHelper分页插件
+   1. 目标: 以非侵入的方式在后端进行分页
+   2. 使用步骤:
+      1. 引入分页插件的依赖
+      2. 在SqlSessionFactoryBean的配置中，配置分页插件
+      3. 在业务层中:
+         1. 调用PageHelper.startPage(pageNo,pageSize)开启分页
+         2. 调用查询所有的持久层方法
+         3. 使用PageInfo封装分页数据	
